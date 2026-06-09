@@ -19,7 +19,7 @@ export default defineGkdSubscription({
   id: 666,
   name: 'JasonGod_gkd',
   version: 0,
-  author: 'AIsouler',
+  author: 'JasonGod',
   checkUpdateUrl: './AIsouler_gkd.version.json5',
   supportUri: 'https://github.com/AIsouler/GKD_subscription/issues/new/choose',
   categories,
