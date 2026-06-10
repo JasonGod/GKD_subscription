@@ -13,6 +13,8 @@ export default defineGkdApp({
       activityIds: [
         'com.x.android.main.MainActivity',
         'com.x.android.profile.ProfileActivity',
+        'com.x.android.tweetdetail.TweetDetailActivity',
+        'com.x.android.search.implementation.results.SearchActivity',
       ],
       rules: [
         {
@@ -63,6 +65,7 @@ export default defineGkdApp({
       desc: '点击右上角关闭,点击屏蔽用户,确认屏蔽.点击[我不喜欢]会返回主页,因此点击[屏蔽]',
       fastQuery: true,
       activityIds: [
+        'com.x.android.main.MainActivity',
         'com.x.android.tweetdetail.TweetDetailActivity',
         'com.x.android.search.implementation.results.SearchActivity',
       ],
@@ -128,7 +131,10 @@ export default defineGkdApp({
       name: '分段广告-用户资料页信息流广告',
       desc: '点击右上角关闭,点击我不喜欢',
       fastQuery: true,
-      activityIds: 'com.x.android.profiles.ProfileActivity',
+      activityIds: [
+        'com.x.android.main.MainActivity',
+        'com.x.android.profiles.ProfileActivity',
+      ],
       actionCd: 3000,
       rules: [
         {
