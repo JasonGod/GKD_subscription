@@ -37,7 +37,7 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
 
 </details>
 
-如果你没有电脑, 可以点击快照-分享，此时会分享一个 zip 文件, 截图和节点信息全在里面, 可以分享到某个云盘或者保存到本地, 然后在 [GKD_subscription/issues/new](https://github.com/AIsouler/GKD_subscription/issues) 上传这个 zip 或者填写分享链接, 然后提出问题, 项目维护者会帮助你处理这个快照
+如果你没有电脑, 可以点击快照-分享，此时会分享一个 zip 文件, 截图和节点信息全在里面, 可以分享到某个云盘或者保存到本地, 然后在 [GKD_subscription/issues/new](https://github.com/JasonGod/GKD_subscription/issues) 上传这个 zip 或者填写分享链接, 然后提出问题, 项目维护者会帮助你处理这个快照
 
 <details close>
   <summary>截图: 分享快照</summary>
