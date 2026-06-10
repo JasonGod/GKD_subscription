@@ -199,8 +199,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'com.x.android.tweetdetail.TweetDetailActivity',
+          activityIds: 'com.x.android.tweetdetail.TweetDetailActivity',
           matches:
             '[vid="translation_link"][text*="翻译"||text="Translate"||text="翻译推文"||text="Translate Tweet"]',
           exampleUrls:
