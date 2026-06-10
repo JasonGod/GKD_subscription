@@ -16,7 +16,7 @@ apps.forEach((appConfig) => {
 });
 
 export default defineGkdSubscription({
-  id: 666,
+  id: 88668886,
   name: 'JasonGod_gkd',
   version: 0,
   author: 'JasonGod',
