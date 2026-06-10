@@ -60,22 +60,23 @@ jobs:
 
       - name: Git commit
         id: commit
+        env:
+          SKIP_SIMPLE_GIT_HOOKS: "1"
         run: |
           git config --local user.email github-actions[bot]@users.noreply.github.com
           git config --local user.name github-actions[bot]
           git status
-          git add -f dist/ README.md CHANGELOG.md
+          git add -f dist/ README.md package.json pnpm-lock.yaml
           git diff --cached --stat
           git commit -m "chore: v${{steps.version.outputs.version}}"
         continue-on-error: true
 
       - name: Git push
         if: ${{ steps.commit.outcome == 'success' }}
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-          tags: true
+        run: |
+          git push origin HEAD:${{ github.ref_name }}
+          git tag v${{ steps.version.outputs.version }}
+          git push origin v${{ steps.version.outputs.version }}
 
       - name: Create Release
         id: create_release
