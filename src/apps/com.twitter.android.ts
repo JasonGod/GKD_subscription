@@ -1,7 +1,7 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
-  id: 'com.x.android',
+  id: 'com.twitter.android',
   name: 'X(推特)',
   groups: [
     {
