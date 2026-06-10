@@ -55,7 +55,7 @@ jobs:
 
       - id: version
         run: |
-          version=$(node -e "import('@gkd-kit/tools').then((m) => m.stdoutGkdVersion());")
+          version=$(node -e "(async () => { const m = await import('@gkd-kit/tools'); console.log(m.stdoutGkdVersion()); })();")
           echo "version=${version}" >> "$GITHUB_OUTPUT"
 
       - name: Git commit
@@ -93,6 +93,6 @@ jobs:
         if: ${{ steps.commit.outcome == 'success' && env.NPM_TOKEN != '' }}
         run: |
           pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-          node -e "import('@gkd-kit/tools').then((m) => m.updatePkgVersion());"
+          node -e "(async () => { const m = await import('@gkd-kit/tools'); m.updatePkgVersion(); })();"
           pnpm publish --no-git-checks
-          node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"
+          node -e "(async () => { const m = await import('@gkd-kit/tools'); m.syncNpmmirror(); })();"
