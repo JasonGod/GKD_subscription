@@ -64,8 +64,9 @@ jobs:
           git config --local user.email github-actions[bot]@users.noreply.github.com
           git config --local user.name github-actions[bot]
           git status
-          git add .
-          git commit -a -m "chore: v${{steps.version.outputs.version}}"
+          git add -f dist/ README.md CHANGELOG.md
+          git diff --cached --stat
+          git commit -m "chore: v${{steps.version.outputs.version}}"
         continue-on-error: true
 
       - name: Git push
@@ -93,6 +94,6 @@ jobs:
         if: ${{ steps.commit.outcome == 'success' && env.NPM_TOKEN != '' }}
         run: |
           pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-          node -e "(async () => { const m = await import('@gkd-kit/tools'); m.updatePkgVersion(); })();"
+          node -e "(async () => { const m = await import('@gkd-kit/tools'); await m.updatePkgVersion(); })();"
           pnpm publish --no-git-checks
-          node -e "(async () => { const m = await import('@gkd-kit/tools'); m.syncNpmmirror(); })();"
+          node -e "(async () => { const m = await import('@gkd-kit/tools'); await m.syncNpmmirror(); })();"
