@@ -55,7 +55,7 @@ jobs:
 
       - id: version
         run: |
-          version=$(node -e "(async () => { const m = await import('@gkd-kit/tools'); console.log(m.stdoutGkdVersion()); })();")
+          version=$(node -e "(async () => { const m = await import('@gkd-kit/tools'); await m.stdoutGkdVersion(); })();")
           echo "version=${version}" >> "$GITHUB_OUTPUT"
 
       - name: Git commit
