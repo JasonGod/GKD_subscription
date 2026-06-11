@@ -5,8 +5,8 @@ export default defineGkdApp({
   name: '红果免费短剧',
   groups: [
     {
-      key: -1,
-      name: '开屏广告',
+      key: 0,
+      name: '局部广告-播放页插入广告',
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
