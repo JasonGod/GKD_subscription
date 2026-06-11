@@ -19,7 +19,6 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/28843809',
             'https://i.gkd.li/i/28843663',
-            'https://i.gkd.li/i/28843593',
           ],
         },
       ],
@@ -36,7 +35,6 @@ export default defineGkdApp({
           activityIds: 'com.taou.maimai.MainActivity',
           matches:
             '[id="com.taou.maimai:id/close_btn" || vid="close_btn"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/28843593',
         },
       ],
     },
