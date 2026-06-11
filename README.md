@@ -50,9 +50,9 @@ https://registry.npmmirror.com/@jasongod/gkd_subscription/latest/files/dist/Jaso
 https://raw.githubusercontent.com/JasonGod/GKD_subscription/main/dist/JasonGod_gkd.json5
 ```
 
-- 当前版本: v3
+- 当前版本: v4
 
-- 当前订阅文件已适配 887 个应用，共有 2076 应用规则组，3 全局规则组
+- 当前订阅文件已适配 887 个应用，共有 2077 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -78,7 +78,7 @@ https://raw.githubusercontent.com/JasonGod/GKD_subscription/main/dist/JasonGod_g
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=JasonGod/GKD_subscription&_v=3)
+![img](https://contrib.rocks/image?repo=JasonGod/GKD_subscription&_v=4)
 
 ## Star History
 
