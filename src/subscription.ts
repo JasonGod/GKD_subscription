@@ -18,7 +18,7 @@ apps.forEach((appConfig) => {
 export default defineGkdSubscription({
   id: 88668886,
   name: 'JasonGod_gkd',
-  version: Math.floor(Date.now() / 1000),
+  version: 0,
   author: 'JasonGod',
   checkUpdateUrl: './JasonGod_gkd.version.json5',
   supportUri: 'https://github.com/JasonGod/GKD_subscription/issues/new/choose',
