@@ -20,5 +20,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能类-订阅页面自动刷新',
+      matchTime: 10000,
+      actionMaximum: 1,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.github.kr328.clash.ProfilesActivity',
+          matches: '[vid="update_view"][desc="新建"]',
+          exampleUrls:
+            'https://e.gkd.li/57941037/40ece44f-883f-429a-aa0c-17dac15a50e4',
+          snapshotUrls: 'https://i.gkd.li/i/28804477',
+        },
+      ],
+    },
   ],
 });
