@@ -21,6 +21,12 @@ export default defineGkdApp({
             'https://i.gkd.li/i/28843663',
           ],
         },
+        {
+          activityIds: 'com.taou.maimai.MainActivity',
+          matches:
+            '@ImageView[childCount=0][clickable=true][visibleToUser=true] <2 FrameLayout < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/28843663',
+        },
       ],
     },
     {
